@@ -17,7 +17,7 @@ public class OperacaoFactory {
     public static Operacao getOperacao(String operacaoName) {
         Class<? extends Operacao> operacaoClass = null;
         try {
-            operacaoClass = (Class<? extends Operacao>) Class.forName("b4hive." + operacaoName);
+            operacaoClass = (Class<? extends Operacao>) Class.forName("b4hive.Operacao" + operacaoName);
         } catch (ClassNotFoundException e) {
             throw new IllegalArgumentException("Operação não encontrada: " + operacaoName);
         }
