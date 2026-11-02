@@ -1,0 +1,18 @@
+@startuml Classes
+
+title Strategy Pattern
+hide members
+'left to right direction
+
+interface Operacao <<interface>>
+class OperacaoSubtrair implements Operacao
+class OperacaoSomar implements Operacao
+class OperacaoDividir implements Operacao
+class OperacaoMedia implements Operacao
+class Calculadora
+Calculadora ..> Operacao
+class Aluno
+Aluno ..> Calculadora
+
+
+@enduml
